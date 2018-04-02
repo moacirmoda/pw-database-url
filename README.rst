@@ -24,14 +24,12 @@ How to by-pass connection object
 --------------------------------
 
 To make an easy process and getting an clean code, you can make a by pass in 
-connection`s objects used in peewee. Example:
+connection`s objects used in peewee. Example::
 
-```
-from pw_database_url import PostgresDatabase
-
-url = 'postgres://uf07k1i6d8ia0v:wegauwhgeuioweg@ec2-107-21-253-135.compute-1.amazonaws.com:5431/d8r82722r2kuvn'
-database = PostgresqlDatabase(url)
-```
+    from pw_database_url import PostgresDatabase
+    
+    url = 'postgres://uf07k1i6d8ia0v:wegauwhgeuioweg@ec2-107-21-253-135.compute-1.amazonaws.com:5431/d8r82722r2kuvn'
+    database = PostgresqlDatabase(url)
 
 Obs: This only works for Postgres, for now.
 
