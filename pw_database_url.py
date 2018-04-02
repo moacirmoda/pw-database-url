@@ -1,5 +1,6 @@
 # coding: utf-8
 import os
+from peewee import PostgresqlDatabase as PeeweePostgresqlDatabase
 
 try:
     import urlparse
@@ -64,3 +65,13 @@ def parse(url):
         config['engine'] = SCHEMES[url.scheme]
 
     return config
+
+
+def PostgresqlDatabase(url):
+    url = parse(url)
+    return PeeweePostgresqlDatabase(url['name'], 
+        user=url['user'],
+        password=url['password'],
+        host=url['host'],
+        port=url['port'],
+    )

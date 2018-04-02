@@ -54,6 +54,9 @@ setup(
     zip_safe=False,
     include_package_data=True,
     platforms='any',
+    install_requires=[
+        'peewee>=3.2',
+    ],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
